@@ -1,0 +1,3 @@
+# Latest compatible runtime dependency verified from PyPI on 2026-05-01.
+openai==2.32.0
+python-dotenv==1.2.2
