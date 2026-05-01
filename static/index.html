@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disk Cleanup Chatbot</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">Local Automation Copilot</p>
+      <h1>Disk Cleanup Chatbot</h1>
+      <p class="lede">
+        Plan disk cleanup tasks, inspect the generated workflow, and approve
+        destructive steps only when you are ready.
+      </p>
+    </section>
+
+    <section class="chat-frame">
+      <header class="chat-header">
+        <div>
+          <h2>Conversation</h2>
+          <p>Natural language in, validated workflow out.</p>
+        </div>
+        <button id="resetBtn" class="ghost-button" type="button">New Chat</button>
+      </header>
+
+      <div id="messages" class="messages"></div>
+
+      <div id="confirmationBar" class="confirmation-bar hidden">
+        <span id="confirmationText"></span>
+        <div class="confirmation-actions">
+          <button id="approveBtn" class="approve-button" type="button">Approve</button>
+          <button id="skipBtn" class="ghost-button" type="button">Skip</button>
+        </div>
+      </div>
+
+      <form id="chatForm" class="composer">
+        <label class="sr-only" for="messageInput">Message</label>
+        <textarea
+          id="messageInput"
+          name="message"
+          rows="2"
+          placeholder="Ask something like 'free up disk space' or 'find large files'"
+        ></textarea>
+        <button id="sendBtn" class="send-button" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
